@@ -1,0 +1,94 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+
+<div class="bd-example">
+    <p class="display-4">Игра "Insert Random Name"</p>
+
+    <p class="h1">Правила игры</p>
+
+    <p class="lead">
+        Суть примерна та же что в интервью, но так как мы постоянно говорим что «все про всех знаем», то можно сделать своеобразный реверс
+    </p>
+
+    <ul class="list-unstyled">
+        <ul>
+            <li>Берём 2 набора карточек по количеству игроков 
+                (это может быть генератор чисел или бочонки лото - что угодно)
+                Или просто пишем Х раз свои имена на бумажке, складываем в пакетик</li>
+            <li>Пишем много-много разных личных вопросов, можно по темам, можно без - 
+                от «любимый фильм» до «самый лучший секс», также мешаем, складываем в шляпу</li>
+            <li>По очереди достаём имя того, за кого нужно ответить и вопрос, на который нужно ответить
+                (Если сделали два набора бумажек, то ещё достаётся тот, кто отвечает). 
+                То есть, например, моя очередь отвечать (или вытянули мое имя, если двдва набора), 
+                я вытягиваю твоё имя и вопрос «любимый исполнитель» и пытаюсь ответить за тебя - 
+                правила по ответам как у дудя - быстро но не обязательно коротко 
+                (например, «вообще одного любимого нет, но я бы сказала что в топе, 
+                Эд Ширан» и блаблабла или просто «Ширан»)</li>
+        </ul>
+        <li>Вообще можно написать приложение которое бы генератором выступало
+            Или в гугал доках такое сделать тоже не сложно</li>
+    </ul>
+</div>
+<!-- <script>
+    var qstns = {{ Questions_html|safe }}; // note that this assignment without quotes - "{{ news_f_html }}" will be just string variable
+</script> -->
+
+{% load static %}
+<script src="{% static '/reverseapp/js/game.js' %}" defer> </script>
+<script src = 
+"https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" >
+</script>
+
+
+<h4>Введите необходимые параметры: </h4>
+    <!-- <div>
+        <p class="lead">Выберите базы вопросов: </p>
+        <p>
+            <input type="checkbox" name="drink" value="rad1"> Пиво<Br>
+            <input type="checkbox" name="drink" value="rad2"> Чай<Br>
+            <input type="checkbox" name="drink" value="rad3"> Кофе<Br>
+        </p>
+    </div> -->
+<div>
+    <p class="lead">Укажите имена участников:</p>
+    <p>
+        <input type="text" id="playersField" class="playersField form-control form-control-lg" 
+        placeholder="Участник 1, Участник 2, Участник 3" aria-label=".form-control-lg example">
+    </p>
+</div>
+    <!-- <input type="submit" value="Далее" class="gameSubmit btn btn-outline-dark"> -->
+<button type="button" class="gameSubmit btn btn-outline-dark">Далее</button>
+
+
+
+<!-- {% for student in teacherStudents %}
+<tr class="tr2">
+    <td class="td" ><input type="text" name="students" value="{{student.id}}" id="student" >{{student.Students_Enrollment_Records.Student_Users}}</td>
+     <td data-id='row' id="ans"><input type='number' class='averages'  readonly/></td>
+</tr>
+{% endfor %} -->
+
+<div class="container">
+    <p></p>
+    <p class="lead">
+            Итак, 
+    </p>
+        На вопрос отвечает: <p class="firstPlayer"></p>
+        Вместо: <p class="secondPlayer"></p>
+        <!-- Вопрос: <p>{{ Questions }}</p> -->
+        Вопрос: <p class="randomQstn"></p>
+    </div>
+</div>
+
+<!-- Участники: <select id="list"></select>
+<button onclick="addName()"> Добавить участника </button><br> -->
+<!-- <button onclick="removeNote()"> Удалить участника </button><br> -->
+<!-- <textarea id="currentnote" style="width: 100%; height: 10em">
+</textarea> -->
+
+<!-- <div class="container" id="raz">
+    <input type="button" value="Добавить">
+</div> -->
+
+{% endblock %}

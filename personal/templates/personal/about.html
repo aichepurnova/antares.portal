@@ -1,0 +1,137 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+{% load static %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div>
+                <p class="h1" style="font-weight: bold">Alina Chepurnova</p>
+                <p class="h4 text-muted" style="font-weight: bold">Python Developer</p>
+            </div>
+            <div class="p-3">
+                <p>Developer with deep analytical skills. 
+                    My passion is to make the team's work easier. 
+                    If something can be automated, it should be automated.</p>
+                <p>For example, an application usage report that used to take a whole day to create 
+                    is now generated with the click of a button. Along with an incentive program,
+                        this has greatly increased app usage. </p>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <img class="rounded-circle" width="300" src="{% static 'personal/aichepurnova.png' %}"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <p class="h3" style="font-weight: bold">Experience</p>
+            <p>All my Job Experience is related to AVON International :)</p>
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p class="h5" style="font-weight: bold">Business Application Developer</p>
+                        at <img width="50" src="{% static 'personal/avonlogo.png' %}"/>
+                        <p class="text-muted" style="font-weight: lighter">Aug 2022 - present</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <ul class="list-group">
+                            <li>Creating and implementing applications supporting the daily work of the Commercial Marketing 
+                                and Commercial Operations team in areas of reporting, sales forecasting, task automation 
+                                and efficiency improvement</li>
+                            <li>Maintenance and development of internal web applications based on Python(Flask)/HTML5/CSS3/JavaScript</li>
+                            <li>Sharing knowledge and best practices related to new tools maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p class="h5" style="font-weight: bold">Digital Analyst</p>
+                        at <img width="50" src="{% static 'personal/avonlogo.png' %}"/>
+                        <p class="text-muted" style="font-weight: lighter">Mar 2021 - Aug 2022</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <ul class="list-group">
+                            <li>Developing and supporting Digital reporting system</li>
+                            <li>Modifying existing reporting system</li>
+                            <li>Provide analytical support for the existing processes, initiatives and projects</li>
+                            <li>Providing data according to pre-defined parameters</li>
+                            <li>Supporting automated reporting distribution system</li>
+                            <li>Participation in past periods results evaluation, analyze actual results versus 
+                                the forecast, provide comments on deviations of actual results in comparison to forecast.</li>
+                            <li>Participation in projects and initiatives with both local and global teams</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p class="h5" style="font-weight: bold">Customer Activation Specialist</p>
+                        at <img width="50" src="{% static 'personal/avonlogo.png' %}"/>
+                        <p class="text-muted" style="font-weight: lighter">Jun 2019 - Mar 2022</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Development and implementation of incentive programs:</p>
+                        <ul class="list-group">
+                            <li>Preparation and approval of business cases</li>
+                            <li>Working with the supply chain to plan the demands</li>
+                            <li>Preparation of communication materials</li>
+                            <li>Working with contractors and with supervisory functions (lawyers, finance, taxes, etc.)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p class="h5" style="font-weight: bold">Customer Activation Intern</p>
+                        <p class="text-muted" style="font-weight: lighter">Oct 2018 - Jun 2019</p>
+                    </div>
+                    <div class="col-sm-8">
+                        Being useful :)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3">
+                <p class="h3" style="font-weight: bold">Skills</p>
+                <span class="badge" style="background-color: rgb(122, 176, 238)">Python</span>
+                <span class="badge" style="background-color: rgb(122, 176, 238)">Analytical Skills</span>
+                <span class="badge" style="background-color: rgb(122, 176, 238)">Flask / Django</span>
+                <span class="badge" style="background-color: rgb(122, 176, 238)">SQL</span>
+                <span class="badge" style="background-color: rgb(122, 176, 238)">JavaScript</span>
+                <span class="badge" style="background-color: rgb(122, 176, 238)">jQuery</span>
+                <span class="badge" style="background-color: rgb(122, 176, 238)">HTML & CSS</span>
+                <span class="badge" style="background-color: rgb(122, 176, 238)">Git</span>
+            </div>
+            <div class="p-3">
+                <p class="h3" style="font-weight: bold">Education</p>
+                <span>Moscow, Higher School of Economics, Sociology, 2015-2019</span>
+            </div>
+            <div class="p-3">
+                <p class="h3" style="font-weight: bold">Hobbies</p>
+                    <span>Boardgames, Dungeons & Dragons, books, ukulele, calculating random statistics (i.e. who is the luckiest in Genshin)</span>
+                    <!-- <span>Играю и мастерю в днд, в основном по авторским сеттингам. Любимый классический - Равенлофт. 
+                        Читаю книжки и фанфики. Из последнего - Гришаверс, Ли Бардуго. Любимые фанфики - ГПМРМ и Узы крови.
+                        Умею многое, но плохо - кататься на пенни, роликах, велосипеде; играть на фортепиано, укулеле, гитаре; делать сайты, 
+                        ориентироваться на местности, вышивать крестиком, вязать спицами и крючком, готовить и печь.
+                        Люблю много гулять пешком.
+                    </span> -->
+            </div>
+            <div class="p-3">
+                <p class="h3" style="font-weight: bold">Contacts</p>
+                <ul class="p-3 list-group">
+                    <li>aichepurnova@gmail.com</li>
+                    <li><a href="https://t.me/aichepurnova" target="blank">https://t.me/aichepurnova</a></li>
+                    <li>+7 (901) 760-11-97</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

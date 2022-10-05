@@ -1,0 +1,118 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+{% load static %}
+<script src="{% static 'chars/js/calculations.js' %}" defer> </script>
+<script src = 
+"https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" >
+</script>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-fluid" width="300" src="{{object.image}}"/>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-8">
+                    <text class="h2">{{object.name}}, </text> 
+                    <text class="h5">{{object.race}}, {{object.klass}} {{object.level}}, {{object.backstory}} </text>
+                </div>
+                <div>
+                    <button type="button" class="btnRollDice btn btn-outline-dark">Сделать бросок</button>
+                </div>
+            </div>
+            <div class="row">
+                <table class="table table-responsive-sm">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><p class="h5">Base AC <text class="h3 armor"></text></p></td>
+                        <td><p class="h5">Spell DC <text class="h3 SpellDC"></text></p></td>
+                        <td><p class="h5">Prof <text class="h3 Prof">{{object.Proficiency}}</text></p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="h5">Base Attack <text class="h3 Attack"></text></p></td>
+                        <td><p class="h5">Initiative <text class="h3 Initiative"></text></p></td>
+                        <td><p class="h5">HP <text class="h3 curHP"></text> / <text class="h3 maxHP">{{object.maxhp}}</text></p></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="rollAttack btn btn-outline-dark">Roll Attack</button></td>
+                        <td><button type="button" class="rollInitSubmit btn btn-outline-dark">Roll Initiative</button></td>
+                        <td><button type="button" class="HPchange btn btn-outline-dark">Change HP</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    <div class="row">        
+        <table class="table">
+            <tr>
+             <th></th><th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th>
+            </tr>
+            <tr>
+                <td>Значение</td>
+                <td class="score stren">{{object.stren}}</td>
+                <td class="score dext">{{object.dext}}</td>
+                <td class="score consti">{{object.consti}}</td>
+                <td class="score inte">{{object.inte}}</td>
+                <td class="score wisd">{{object.wisd}}</td>
+                <td class="score charis">{{object.charis}}</td>
+            </tr>
+            <tr>
+                <td>Модификатор</td>
+                <td class="modif stren"></td><td class="modif dext"></td><td class="modif consti"></td>
+                <td class="modif inte"></td><td class="modif wisd"></td><td class="modif charis"></td>
+            </tr>
+           </table>
+    </div>
+    <div class="row">
+        <div class="row">
+            <p class="h3">Tools</p>
+            <p>{{object.tools}}</p>
+        </div>
+        <div class="row">
+            <p class="h3">Proficiencies</p>
+            <p>{{object.Proficiencies|safe|linebreaks}}</p>
+        </div>
+        <div class="row">
+            <p class="h3">Languages</p>
+            <p>{{object.languages}}</p>
+        </div>
+        <div class="row">
+            <p class="h3">Equipment</p>
+            <p>{{object.Equipment}}</p>
+        </div>
+        <div class="row">
+            <table class="table"> 
+                <tr>
+                    <th>Platinum</th>
+                    <th>Gold</th>
+                    <th>Silver</th>
+                    <th>Cuprum</th>
+                </tr>
+                <tr>
+                    <td>{{object.platinum}}</td>
+                    <td>{{object.gold}}</td>
+                    <td>{{object.silver}}</td>
+                    <td>{{object.cuprum}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <p>{{object.skills|safe|linebreaks}}</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+{% endblock %}

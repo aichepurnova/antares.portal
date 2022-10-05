@@ -1,0 +1,21 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="h1" >
+        <p>Библиотека персонажей</p>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+        {% for char in object_list %}
+        <div class="col">
+            <img width="200" height="250" src="{{char.image}}"/>
+            <p class="h5">{{char.name}}</p>
+            <p>{{char.race}}, {{char.klass}} {{char.level}} </p>
+            <p><a href="/chars/{{char.id}}">Играть за него</a></p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
