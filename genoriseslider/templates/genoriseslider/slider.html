@@ -1,0 +1,102 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+<h1>GOS Slider</h1>
+<div>
+    <p>Мне кажется, нам нужны слова которые будут отвечать за то,
+     нравятся ли человеку только девочки или только мальчики. 
+     Сейчас у нас есть только лесбиянка/гей или гетеро/гомосексуальности. 
+     Но! Небинарные персоны вынуждены проговаривать «я небинарная персона,
+      которым нравятся только девочки/мальчики». Они не могут про себя сказать «гетеро/гомо».
+      Да и, честно говоря, сама концепция лесбиянок геев гомо и гетеро предполагает, что у тебя есть 
+      заложенная гендерная идентичность (лесбиянкой может быть только девочка или транс-девочка).</p>
+    <p>Впрочем, как пан, я считаю, что в идеальном мире не нужны будут слова описывающие гендер или ориентацию,
+        потому что человечество должно принять что каждый может одеваться, вести себя так, как он хочет
+        и быть тем кем и с кем он хочет (в рамках закона), независимо от половых признаков</p>
+    <p>
+    Но на первое время нужно хотя бы отделить гендер от ориентации и от сексуальности. Это три разных спектра:
+        <li>идентичность (я - феминная-девушка, маскулинная-девушка, небинарные, феминный парень, маскулинный-парень)</li>
+        <li>ориентация (мне нравятся только девушки, девушки и парни, только парни) </li>
+        <li>сексуальность (секс - это кринж, фу и вообще зачем или секс - это классно, давайте каждый день)</li>
+    </p>
+
+    <p>И все это не должно применяться к детям! Идентичность не должна присваиваться с детства 
+        (куклы - девочкам, машинки - мальчикам). Ну и, конечно же, ориентация и сексуальность могут быть только с 18 лет! 
+        Хотя говорить об этом можно начать и раньше.</p>
+    
+    <p>Поэтому я представляю форму с тремя спектрами. Отметьте себя на каждой из шкал, 
+        и я выдам вам картинку или ваше описание в GOS. Я, кстати, хочу пособирать статистику, 
+        поэтому сохраню ваш Cookie ID и последний результат отправки формы.</p>
+</div>
+<div>
+    <form>
+        <div>
+            <div>
+                <label for="gender" class="form-label">Gender</label>
+                <input type="range" class="form-range" min="0" max="5" step="0.5" id="gender">
+            </div>
+            <div>
+                <label for="orientation" class="form-label">Orientation</label>
+                <input type="range" class="form-range" min="0" max="5" step="0.5" id="orientation">
+            </div>
+            <div>
+                <label for="sexuality" class="form-label">Sexuality</label>
+                <input type="range" class="form-range" min="0" max="5" step="0.5" id="sexuality">
+            </div>
+        </div>
+        <div>
+            <p>Pronoun</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="pronoun" id="pronounShe">
+                <label class="form-check-label" for="pronounShe">
+                  She/Her
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="pronoun" id="pronounHe" checked>
+                <label class="form-check-label" for="pronounHe">
+                  He/Him
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="pronoun" id="pronounThey" checked>
+                <label class="form-check-label" for="pronounThey">
+                  They/Them
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="pronoun" id="pronounOther" checked>
+                <label class="form-check-label" for="pronounOther">
+                  Other
+                </label>
+            </div>
+        </div>
+        <div>
+            <p>Sex (biological)</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sex" id="sexShe">
+                <label class="form-check-label" for="sexShe">
+                  Female
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sex" id="sexHe" checked>
+                <label class="form-check-label" for="sexHe">
+                  Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sex" id="sexOther" checked>
+                <label class="form-check-label" for="sexOther">
+                  Other
+                </label>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary mb-3">Send form</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

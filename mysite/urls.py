@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('personal.urls')),
     url(r'^', include('reverseapp.urls')),
-    url(r'^chars/', include('chars.urls'))
+    url(r'^chars/', include('chars.urls')),
+    url(r'^slider/', include('genoriseslider.urls'))
     ]

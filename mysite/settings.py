@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'chars',
     'personal',
     'reverseapp',
+    'genoriseslider',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
