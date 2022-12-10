@@ -9,18 +9,18 @@
 
 
 <div class="container">
-    <div class="row">
+    <div class="row my-3">
         <div class="col-md-4">
-            <img class="img-fluid" width="300" src="{{object.image}}"/>
+            <img class="img-fluid rounded-circle" width="300" src="{{object.image}}"/>
         </div>
         <div class="col-md-8">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-sm-8">
                     <text class="h2">{{object.name}}, </text> 
                     <text class="h5">{{object.race}}, {{object.klass}} {{object.level}}, {{object.backstory}} </text>
                 </div>
-                <div>
-                    <button type="button" class="btnRollDice btn btn-outline-dark">Сделать бросок</button>
+                <div class="col-sm-4">
+                    <button type="button" class="btnRollDice btn btn-outline-dark">Roll dice(s)</button>
                 </div>
             </div>
             <div class="row">
@@ -45,21 +45,17 @@
                         <td><button type="button" class="rollInitSubmit btn btn-outline-dark">Roll Initiative</button></td>
                         <td><button type="button" class="HPchange btn btn-outline-dark">Change HP</button></td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
                 </table>
             </div>
         </div>
-    <div class="row">        
+    </div>
+    <div class="row my-3">
         <table class="table">
             <tr>
              <th></th><th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th>
             </tr>
             <tr>
-                <td>Значение</td>
+                <td>Value</td>
                 <td class="score stren">{{object.stren}}</td>
                 <td class="score dext">{{object.dext}}</td>
                 <td class="score consti">{{object.consti}}</td>
@@ -68,13 +64,13 @@
                 <td class="score charis">{{object.charis}}</td>
             </tr>
             <tr>
-                <td>Модификатор</td>
+                <td>Modifier</td>
                 <td class="modif stren"></td><td class="modif dext"></td><td class="modif consti"></td>
                 <td class="modif inte"></td><td class="modif wisd"></td><td class="modif charis"></td>
             </tr>
            </table>
     </div>
-    <div class="row">
+    <div class="row my-3">
         <div class="row">
             <p class="h3">Tools</p>
             <p>{{object.tools}}</p>

@@ -4,15 +4,17 @@
 
 <div class="container">
     <div class="h1" >
-        <p>Библиотека персонажей</p>
+        <p>Character Library</p>
     </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+    <div class="row align-items-center">
         {% for char in object_list %}
-        <div class="col">
-            <img width="200" height="250" src="{{char.image}}"/>
+        <div class="col-sm py-3">
+            <img class="rounded-circle" width="200" src="{{char.image}}"/>
             <p class="h5">{{char.name}}</p>
             <p>{{char.race}}, {{char.klass}} {{char.level}} </p>
-            <p><a href="/chars/{{char.id}}">Играть за него</a></p>
+            <a href="/chars/{{char.id}}">
+                <button type="button" class="btn btn-outline-dark">Play</button>
+            </a>
         </div>
         {% endfor %}
     </div>

@@ -16,12 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url, include
+from django.conf.urls.i18n import i18n_patterns
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url('admin/', admin.site.urls),
+    url('i18n/', include('django.conf.urls.i18n')),
+    ]
+
+urlpatterns += i18n_patterns(
     url(r'^', include('personal.urls')),
     url(r'^', include('reverseapp.urls')),
     url(r'^chars/', include('chars.urls')),
-    url(r'^slider/', include('genoriseslider.urls'))
-    ]
+    # url(r'^slider/', include('genoriseslider.urls'))
+)
+

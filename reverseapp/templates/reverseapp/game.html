@@ -3,36 +3,29 @@
 {% block content %}
 
 <div class="bd-example">
-    <p class="display-4">Игра "Insert Random Name"</p>
-
-    <p class="h1">Правила игры</p>
-
+    <p class="display-4">Random game</p>
     <p class="lead">
-        Суть примерна та же что в интервью, но так как мы постоянно говорим что «все про всех знаем», то можно сделать своеобразный реверс
+        We often play Interview with friends.
+        The essence of this game is approximately the same,
+        but since we constantly say that “we know everything about everyone”,
+        I suggested making a kind of reverse game.
     </p>
-
-    <ul class="list-unstyled">
-        <ul>
-            <li>Берём 2 набора карточек по количеству игроков 
-                (это может быть генератор чисел или бочонки лото - что угодно)
-                Или просто пишем Х раз свои имена на бумажке, складываем в пакетик</li>
-            <li>Пишем много-много разных личных вопросов, можно по темам, можно без - 
-                от «любимый фильм» до «самый лучший секс», также мешаем, складываем в шляпу</li>
-            <li>По очереди достаём имя того, за кого нужно ответить и вопрос, на который нужно ответить
-                (Если сделали два набора бумажек, то ещё достаётся тот, кто отвечает). 
-                То есть, например, моя очередь отвечать (или вытянули мое имя, если двдва набора), 
-                я вытягиваю твоё имя и вопрос «любимый исполнитель» и пытаюсь ответить за тебя - 
-                правила по ответам как у дудя - быстро но не обязательно коротко 
-                (например, «вообще одного любимого нет, но я бы сказала что в топе, 
-                Эд Ширан» и блаблабла или просто «Ширан»)</li>
-        </ul>
-        <li>Вообще можно написать приложение которое бы генератором выступало
-            Или в гугал доках такое сделать тоже не сложно</li>
+    <p class="h3">Rules</p>
+    <ul>
+        <li>Take 2 sets of cards according to the number of players.
+            It could also be a number generator, or a bunch of paper names folded into a hat.</li>
+        <li>Write a lot of different personal questions, like “favorite movie” or “who is your crash”.
+            Mix these questions and put them in another hat</li>
+        <li>In turns, take out the name of the person for whom
+            someone will be answering the question and the question that needs to be answered.
+            (If you made two sets of names, then also get a piece of paper with the name
+            of the person who answers).</li>
+        <li>For example, it's my turn to answer (or my name was pulled out of the "who answers" bag).
+            I pull out your name and the question "favorite artist".
+            Then I try to answer that question for you (naming your favorite artist).
+            Rules for answers - fast, but not necessarily short. </li>
     </ul>
 </div>
-<!-- <script>
-    var qstns = {{ Questions_html|safe }}; // note that this assignment without quotes - "{{ news_f_html }}" will be just string variable
-</script> -->
 
 {% load static %}
 <script src="{% static '/reverseapp/js/game.js' %}" defer> </script>
@@ -40,55 +33,32 @@
 "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" >
 </script>
 
-
-<h4>Введите необходимые параметры: </h4>
-    <!-- <div>
-        <p class="lead">Выберите базы вопросов: </p>
-        <p>
-            <input type="checkbox" name="drink" value="rad1"> Пиво<Br>
-            <input type="checkbox" name="drink" value="rad2"> Чай<Br>
-            <input type="checkbox" name="drink" value="rad3"> Кофе<Br>
-        </p>
-    </div> -->
-<div>
-    <p class="lead">Укажите имена участников:</p>
-    <p>
-        <input type="text" id="playersField" class="playersField form-control form-control-lg" 
-        placeholder="Участник 1, Участник 2, Участник 3" aria-label=".form-control-lg example">
-    </p>
-</div>
-    <!-- <input type="submit" value="Далее" class="gameSubmit btn btn-outline-dark"> -->
-<button type="button" class="gameSubmit btn btn-outline-dark">Далее</button>
-
-
-
-<!-- {% for student in teacherStudents %}
-<tr class="tr2">
-    <td class="td" ><input type="text" name="students" value="{{student.id}}" id="student" >{{student.Students_Enrollment_Records.Student_Users}}</td>
-     <td data-id='row' id="ans"><input type='number' class='averages'  readonly/></td>
-</tr>
-{% endfor %} -->
-
-<div class="container">
-    <p></p>
-    <p class="lead">
-            Итак, 
-    </p>
-        На вопрос отвечает: <p class="firstPlayer"></p>
-        Вместо: <p class="secondPlayer"></p>
-        <!-- Вопрос: <p>{{ Questions }}</p> -->
-        Вопрос: <p class="randomQstn"></p>
+<div class="row align-items-center">
+    <div class="col-sm">
+        <p class="lead">Input names of the players:</p>
+        <div class="row align-items-center my-1">
+                <div class="col-sm">
+                    <input type="text" id="playersField" class="playersField form-control form-control-lg"
+                           placeholder="Player 1, Player 2, Player 3" aria-label=".form-control-lg">
+                </div>
+            </div>
+        <div class="row align-items-center my-1">
+            <div class="col-sm">
+                <button type="button" class="gameSubmit btn btn-outline-dark">Next</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="row align-items-center">
+            <div class="col-sm my-1">
+                <p class="lead">Results:</p>
+                Who answers: <p class="firstPlayer"></p>
+                Instead of: <p class="secondPlayer"></p>
+                Question: <p class="randomQstn"></p>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- Участники: <select id="list"></select>
-<button onclick="addName()"> Добавить участника </button><br> -->
-<!-- <button onclick="removeNote()"> Удалить участника </button><br> -->
-<!-- <textarea id="currentnote" style="width: 100%; height: 10em">
-</textarea> -->
-
-<!-- <div class="container" id="raz">
-    <input type="button" value="Добавить">
-</div> -->
 
 {% endblock %}
