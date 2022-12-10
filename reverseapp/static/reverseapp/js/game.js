@@ -2,7 +2,7 @@ var questions = [
 'Favorite movie?',
 'Favorite book?',
 'Favorite singer or band?',
-'Favorite food'',
+'Favorite food',
 'If you could do anything (no limitations), what would it be?',
 'What do you regret?',
 'How much money do you need for a comfortable life?',
@@ -11,9 +11,9 @@ var questions = [
 'If you could travel anywhere, where would you go?',
 'You are getting BIG money right now, what are you going to do with them? You can not invest it or give it to charity.',
 'Name the worst quality for each of those present',
-'Name the best quality for each of those present'
+'Name the best quality for each of those present',
 'Top 5 of your best qualities',
-'Top 5 of your worst qualities'
+'Top 5 of your worst qualities',
 'What do you believe in?',
 'Would you like to change something in yourself?',
 'What was your last/weirdest/most memorable dream?',
@@ -26,12 +26,12 @@ var questions = [
 'The biggest achievement in life',
 'What useless talent do you have?',
 'What is your best memory?',
-'What is your worst memory?'
+'What is your worst memory?',
 'What is your (childhood) trauma? ',
 'What features of appearance do you find attractive?',
 'What features of appearance do you find repulsive?',
 'Who is your crush? 😌',
-'Red flags'
+'Red flags',
 'Green flags']
 
 var playersField = document.querySelector('.playersField');
