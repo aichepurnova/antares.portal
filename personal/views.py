@@ -6,3 +6,6 @@ def about(request):
 
 def home(request):
     return render(request, 'personal/home.html')
+
+def destree(request):
+    return render(request, 'personal/destree.html')
